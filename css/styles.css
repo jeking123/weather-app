@@ -6,10 +6,13 @@ YOUR STYLES
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-    
+header {
+    flex-basis:90%;
+    margin-left:.85em;
+}
 main{
-    background: grey;
-    margin: 10px;
+    background: #;
+    margin: 5px;
     padding:10px;
     
     /*  flexbox  */
@@ -28,6 +31,82 @@ section{
    
     flex: 1 0 200px ;
 }
+.geo {
+    flex-basis:95%;
+    text-align: center;
+}
+.geo button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: white;
+    border: none;
+}
+h1 {
+    margin: -5px 0 0 0;
+}
+
+.forecast p {
+    line-height: .4em;
+}
+
+/* 
+    Weather Icons 
+http://erikflowers.github.io/weather-icons/
+    Condition Codes 
+https://developer.yahoo.com/weather/documentation.html#codes 
+*/
+.wi-0:before  {  content:"\f056";}
+.wi-1:before  {  content:"\f01d";}
+.wi-2:before  {  content:"\f073";}
+.wi-3:before  {  content:"\f01e";}
+.wi-4:before  {  content:"\f01e";}
+.wi-5:before  {  content:"\f017";}
+.wi-6:before  {  content:"\f017";}
+.wi-7:before  {  content:"\f01b";}
+.wi-8:before  {  content:"\f017";}
+.wi-9:before  {  content:"\f01a";}
+.wi-10:before {  content:"\f076";}
+.wi-11:before {  content:"\f019";}
+.wi-12:before {  content:"\f019";}
+.wi-13:before {  content:"\f064";}
+.wi-14:before {  content:"\f064";}
+.wi-15:before {  content:"\f064";}
+.wi-16:before {  content:"\f064";}
+.wi-17:before {  content:"\f015";}
+.wi-18:before {  content:"\f0b5";}
+.wi-19:before {  content:"\f063";}
+.wi-20:before {  content:"\f014";}
+.wi-21:before {  content:"\f0b6";}
+.wi-22:before {  content:"\f062";}
+.wi-23:before {  content:"\f062";}
+.wi-24:before {  content:"\f021";}
+.wi-25:before {  content:"\f076";}
+.wi-26:before {  content:"\f013";}
+.wi-27:before {  content:"\f031";}
+.wi-28:before {  content:"\f002";}
+.wi-29:before {  content:"\f031";}
+.wi-30:before {  content:"\f002";}
+.wi-31:before {  content:"\f02e";}
+.wi-32:before {  content:"\f00d";}
+.wi-33:before {  content:"\f02e";}
+.wi-34:before {  content:"\f00d";}
+.wi-35:before {  content:"\f017";}
+.wi-36:before {  content:"\f072";}
+.wi-37:before {  content:"\f01e";}
+.wi-38:before {  content:"\f01e";}
+.wi-39:before {  content:"\f01e";}
+.wi-40:before {  content:"\f01a";}
+.wi-41:before {  content:"\f064";}
+.wi-42:before {  content:"\f064";}
+.wi-43:before {  content:"\f064";}
+.wi-44:before {  content:"\f013";}
+.wi-45:before {  content:"\f01e";}
+.wi-46:before {  content:"\f064";}
+.wi-47:before {  content:"\f01e";}
+.wi-3200:before {  content:"\f075"}
+
+
+/* End Weather Icons */
 
 
 /********************
@@ -36,27 +115,8 @@ MEDIA QUERIES
 /* Desktop */
 @media screen /* 2560px = 160em */
   and (max-width: 160em)
-  /* 1280px = 80em */
-  and (min-width: 80em) { 
-  
-  /* Diagnostic Styling. */
-  body {
-       background: blue;
-  }
-
-}
-
-/* Tablet */
-@media screen 
-   /* 1279 = 79.9375em */  
-  and (max-width: 79.9375em)
-   /* 768px = 160em */
   and (min-width: 48em)  {
-
-  /* Diagnostic Styling. */
-  body {
-       background: green;
-  }
+      
 
 }
 
@@ -65,11 +125,19 @@ MEDIA QUERIES
   /* 767px = 47.9375em */
   and (max-width: 47.9375em)
   /* 320px = 20em */
-  and (min-width: 20em) { 
-
-  /* Diagnostic Styling. */
-	body {
-       background: red;
-	}
+  and (min-width: 0em) { 
+      .seattle {
+          display:none;
+      }
+      .spokane {
+          display:none;
+      }
+      .cheney {
+          display:none;
+      }
+      .geo {
+          overflow:scroll;
+          height: 88vh;
+      }
 	
 }
